@@ -1,0 +1,20 @@
+@import "materialize";
+
+.nav {
+    background-color: #F9B294;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #F2727F;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  .fc {
+      background-color: #C06C86;
+  }
