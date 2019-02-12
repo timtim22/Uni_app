@@ -1,0 +1,44 @@
+<%= render 'shared/errors', obj: @student %>
+
+    <div class="container">
+      <div class="row center sign-up-form">
+        <div class="cols12 m12 l12">
+          <div class="card-panel teal darken-1">
+            <h3 signup><class="header"><%= @student.new_record? ? "Sign Up!" : "Edit Your Profile" %></h3>
+            <div class = "row">
+              <%= form_for(@student, html: {class: "col s12"}) do |f| %>
+              <div class= "row">
+                <div class= "input-field col s12">
+                    <%= f.text_field :name, placeholder: "Enter your Full Name", autofocus: true %>
+                    <%= f.label :Name, class: "active" %>
+                </div>
+              </div>
+              <div class= "row">
+                <div class= "input-field col s12">
+                  <%= f.text_field :email, placeholder: "Enter your Email", autofocus: true %>
+                  <%= f.label :Email, class: "active" %> 
+                </div>
+              </div>
+              <div class= "row">
+                <div class= "input-field col s12">
+                  <%= f.password_field :password, placeholder: "Choose Your Password", autofocus: true %>
+                  <%= f.label :password, class: "active" %> 
+                </div>
+              </div>
+              <div class= "row">
+                <div class= "input-field col s12">
+                  <%= f.password_field :password_confirmation, placeholder: "Confirm your Password", autofocus: true %>
+                  <%= f.label :password_confirmation, class: "active" %> 
+                </div>
+              </div>
+              <div class= "row">
+                <div class= "input-field col s12">
+                  <%= f.button(@student.new_record? ? '<i class="material-icons right">arrow_forward</i>Sign Up'.html_safe : '<i class="material-icons right">arrow_forward</i>Submit Changes'.html_safe, class: "btn right orange waves-effect waves-light") %>
+                </div>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

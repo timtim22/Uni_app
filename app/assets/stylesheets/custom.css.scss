@@ -5,10 +5,11 @@
 }
 
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    background-color: #F2727F;
+    //display: flex;
+    //min-height: 100vh;
+    //flex-direction: column;
+    //background-color: #F2727F;
+    background-image: url('lamps.jpg')
   }
 
   main {
@@ -18,3 +19,11 @@ body {
   .fc {
       background-color: #C06C86;
   }
+
+  .sign-up-form {
+      padding-top: 30px;
+  }
+
+.back {
+opacity: 0.5;
+}
